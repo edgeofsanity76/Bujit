@@ -8,7 +8,7 @@ public static class TransactionTimelineExtensions
     public static IEnumerable<(Transaction transactionInstance, DateTime occursOn, decimal balance)> GetBalanceForDateRange(this TransactionTimeline transactionTimeline, DateTime
         startDate, DateTime endDate, decimal currentBalance)
     {
-        var transactionInstances = transactionTimeline.GetForDateRange(startDate, endDate);
+        var transactionInstances = transactionTimeline.InDateRange(startDate, endDate);
 
         foreach (var transactionInstance in transactionInstances)
         {

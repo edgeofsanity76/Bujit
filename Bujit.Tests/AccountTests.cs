@@ -1,5 +1,6 @@
 using Bujit.Core;
 using Bujit.Core.Enums;
+using Bujit.Core.Extensions;
 using Xunit;
 
 namespace Bujit.Tests;
@@ -13,7 +14,6 @@ public class AccountTests(Context context) : IClassFixture<Context>
         var account = new Account("Test Account");
         var transaction = context.GetRandomSingleTransactionInstance(DateTime.UtcNow, 100, TransactionType.Income);
         var transactionTimeline = new TransactionTimeline(transaction);
-
 
         //Act
         account = account.UpdateBalance(transactionTimeline);

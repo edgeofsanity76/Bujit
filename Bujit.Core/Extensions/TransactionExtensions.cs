@@ -3,7 +3,7 @@ using Bujit.Core.Transactions;
 
 namespace Bujit.Core.Extensions;
 
-public static class RecordExtensions
+public static class TransactionExtensions
 {
     public static bool OccursOnDate(this Transaction transaction, DateTime currentDate)
     {
@@ -36,6 +36,7 @@ public static class RecordExtensions
         };
     }
 
+    //TODO: Refactor these methods to be more efficient
     private static IEnumerable<DateTime> GetDailyTransactionDates(DateTime from, DateTime to) => Enumerable.Range(0, (to - from).Days + 1).Select(d => from.AddDays(d));
     private static IEnumerable<DateTime> GetWeeklyTransactionDates(Transaction transaction, DateTime from, DateTime to) => Enumerable.Range(0, (to - from).Days + 1).Select(d => from.AddDays(d)).Where(d => d.DayOfWeek == transaction.StartDate.DayOfWeek);
     private static IEnumerable<DateTime> GetMonthlyTransactionDates(Transaction transaction, DateTime from, DateTime to) => Enumerable.Range(0, (to - from).Days + 1).Select(d => from.AddDays(d)).Where(d => d.Day == transaction.StartDate.Day);
