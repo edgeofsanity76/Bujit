@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bujit Console", "Bujit Console\Bujit Console.csproj", "{5A5DB530-8926-42B0-89BD-B5E69A021F5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bujit Console", "Bujit Console\Bujit Console.csproj", "{5A5DB530-8926-42B0-89BD-B5E69A021F5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bujit.Core", "Bujit.Core\Bujit.Core.csproj", "{1464A1AA-9ED0-4FEB-AD3A-86ADFB9685C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bujit.Core", "Bujit.Core\Bujit.Core.csproj", "{1464A1AA-9ED0-4FEB-AD3A-86ADFB9685C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bujit.Tests", "Bujit.Tests\Bujit.Tests.csproj", "{CE0AA5CB-F35D-4176-9EAD-215C83ABE34A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1464A1AA-9ED0-4FEB-AD3A-86ADFB9685C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1464A1AA-9ED0-4FEB-AD3A-86ADFB9685C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1464A1AA-9ED0-4FEB-AD3A-86ADFB9685C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE0AA5CB-F35D-4176-9EAD-215C83ABE34A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE0AA5CB-F35D-4176-9EAD-215C83ABE34A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE0AA5CB-F35D-4176-9EAD-215C83ABE34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE0AA5CB-F35D-4176-9EAD-215C83ABE34A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
