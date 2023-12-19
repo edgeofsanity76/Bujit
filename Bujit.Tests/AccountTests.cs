@@ -73,12 +73,12 @@ public class AccountTests(Context context) : IClassFixture<Context>
         var account = new Account("Test Account");
         var transaction1 = context.GetRandomSingleTransactionInstance(DateTime.UtcNow, 100, TransactionType.Income);
         var transaction2 = context.GetRandomSingleTransactionInstance(DateTime.UtcNow.AddDays(1), 100, TransactionType.Expense);
-        var transaction3 = context.GetRandomWeeklyTransactionInstance(DateTime.UtcNow.AddDays(2), DateTime.UtcNow.AddDays(10), 100, TransactionType.Income);
+        var transaction3 = context.GetRandomWeeklyTransactionInstance(DateTime.UtcNow, DateTime.UtcNow.AddDays(14), 100, TransactionType.Income);
         var transactionTimeline = new TransactionTimeline(transaction1, transaction2, transaction3);
 
         //Act
         account = account.UpdateBalance(transactionTimeline);
-        Assert.Equal(100, account.Balance);
+        Assert.Equal(300, account.Balance);
     }
 
     [Fact]

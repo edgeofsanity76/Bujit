@@ -1,8 +1,9 @@
-﻿using Xunit;
+﻿using Bujit.Core.Extensions;
+using Xunit;
 
 namespace Bujit.Tests;
 
-public class TransactionInstanceTests(Context context) : IClassFixture<Context>
+public class TransactionTests(Context context) : IClassFixture<Context>
 {
     [Fact]
     public void ShouldReturnCorrectDatesForRepeatingTransactionYearly()
